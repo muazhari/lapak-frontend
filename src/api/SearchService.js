@@ -1,7 +1,6 @@
 import Axios from "axios";
 
 class SearchService {
-  // apiURL = "http://localhost:3000/api/v1";
   apiURL = process.env.REACT_APP_API_URL;
 
   getAllItem() {
