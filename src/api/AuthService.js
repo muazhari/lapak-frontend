@@ -22,21 +22,10 @@ class AuthService {
   }
 
   handleLogin({ username, password }) {
-    return Axios.post(
-      `${this.apiURL}/auth/login`,
-      {
-        headers: {
-          authorization: this.createBasicAuthToken(
-            this.username,
-            this.password
-          ),
-        },
-      },
-      {
-        username,
-        password,
-      }
-    );
+    return Axios.post(`${this.apiURL}/auth/login`, {
+      username,
+      password,
+    });
   }
 
   handleRegister({ username, email, password }) {
